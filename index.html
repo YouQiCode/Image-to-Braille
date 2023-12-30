@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="给定图像，此页面将显示使用盲文作为1位像素的文本版本">
+	<title>图像到盲文</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="braille.js"></script>
+	<script src="dithering.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<textarea id="text" readonly></textarea>
+	<div id="options">
+		<div>
+			<a href="https://github.com/youqi4461/Image-to-Braille" target="_blank">现Github</a>
+			<a href="https://github.com/505e06b2/Image-to-Braille" target="_blank">原Github</a>
+		</div>
+		<div><input id="file" type="file" accept="image/*"></div>
+
+		<div title="切换深色主题"><input type="checkbox" id="darktheme"> 深色主题</div>
+		<div title="黑白反转"><input type="checkbox" id="inverted"> 倒转</div>
+		<div title="单色抖动"><input type="checkbox" id="dithering"> 抖动</div>
+		<div title="禁用占位符间距"><input type="checkbox" id="monospace"> 等宽字体</div>
+		<div title="灰度模式">
+			<select id="greyscale_mode">
+				<option value="luminance">亮度</option>
+				<option value="lightness">轻盈</option>
+				<option value="average">平均</option>
+				<option value="value">重视</option>
+			</select>
+		</div>
+		<div>
+			<input type="number" min="2" value="50" step="2" max="500" id="width">
+			宽度（字符）
+		</div>
+		<div>
+			<button id="clipboard">复制为剪贴板</button>
+		</div>
+		<div>
+			字符计数：<span id="charcount">0</span>
+		</div>
+	</div>
+</body>
+</html>
