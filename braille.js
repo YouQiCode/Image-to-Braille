@@ -61,7 +61,7 @@ function toGreyscale(r, g, b) {
 			return Math.max(r,g,b);
 
 		default:
-			console.error("Greyscale mode is not valid");
+			console.error("灰度模式无效");
 			return 0;
 	}
 }
