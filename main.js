@@ -89,3 +89,4 @@ window.onload = () => {
 	initUI();
 	loadNewImage("select.png");
 }
+console.log("https://github.com/youqi4461/Image-to-Braille");
